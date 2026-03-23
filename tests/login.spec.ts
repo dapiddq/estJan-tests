@@ -5,8 +5,8 @@ test.describe('Login', () => {
   test('should login successfully with valid credentials', async ({ page }) => {
     await page.goto('https://www.estjan.com/my-account/');
 
-    await page.fill('input[name="username"]', 'david@hyge.sg');
-    await page.fill('input[name="password"]', 'Peachgum18');
+    await page.fill('input[name="username"]', 'testuser@example.com');
+    await page.fill('input[name="password"]', 'testpassword123');
     await page.click('button[name="login"]');
 
     await expect(page).toHaveURL(/my-account/);
@@ -16,8 +16,8 @@ test.describe('Login', () => {
   test('should show error with invalid credentials', async ({ page }) => {
     await page.goto('https://www.estjan.com/my-account/');
 
-    await page.fill('input[name="username"]', 'davidd@hyge.sg');
-    await page.fill('input[name="password"]', 'hahahahaha');
+    await page.fill('input[name="username"]', 'testuser@example.com');
+    await page.fill('input[name="password"]', 'testinvalidpassword123');
     await page.click('button[name="login"]');
 
     await expect(page.locator('.wc-block-components-notice-banner.is-error')).toBeVisible();

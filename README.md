@@ -1,25 +1,31 @@
-estJan Playwright Tests
-Automated test suite for estJan.com built with Playwright and TypeScript.
-What's Tested
-Login
+# estJan Playwright Tests
 
-Successful login with valid credentials
-Error shown with invalid credentials
-Error shown when fields are empty
+Automated test suite for [estJan.com](https://www.estjan.com) built with Playwright and TypeScript.
 
-Register
+## What's Tested
 
-Successful registration with a new email
-Error shown when registering with an existing email
-Error shown when email field is empty
+**Login**
+- Successful login with valid credentials
+- Error shown with invalid credentials
+- Error shown when fields are empty
 
-Tech Stack
+**Register**
+- Successful registration with a new email
+- Error shown when registering with an existing email
+- Error shown when email field is empty
 
-Playwright
-TypeScript
+## Tech Stack
 
-Run Tests
-bashnpx playwright test
+- [Playwright](https://playwright.dev/)
+- TypeScript
+
+## Run Tests
+```bash
+npx playwright test
+```
+
 Run a specific file:
-bashnpx playwright test login.spec.ts
+```bash
+npx playwright test login.spec.ts
 npx playwright test register.spec.ts
+```
